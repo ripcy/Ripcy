@@ -316,11 +316,8 @@ urllib.request.urlretrieve(src, folderNDF+"2.png")
 # 82 | click | css=.ui-icon-closethick | 
 driver.find_element(By.CSS_SELECTOR, ".ui-icon-closethick").click()
 
-
 driver.close()
 
-from PIL import Image
-from tanggal import besok,sekarang
 ######### Crop
 asmat = Image.open(folderNDF+"asmat.png").crop((0, 0, 744, 609)).save(folderNDF+"asmat.png")
 biak = Image.open(folderNDF+"biak.png").crop((0, 0, 744, 960)).save(folderNDF+"biak.png")
