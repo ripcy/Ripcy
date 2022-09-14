@@ -317,7 +317,7 @@ urllib.request.urlretrieve(src, folderNDF+"2.png")
 driver.find_element(By.CSS_SELECTOR, ".ui-icon-closethick").click()
 
 
-
+driver.close()
 
 from PIL import Image
 from tanggal import besok,sekarang
@@ -362,5 +362,3 @@ newimage = Image.new("RGB", (744, 1775), "white")
 newimage.paste(im1, (0,0))
 newimage.paste(im2, (0,1028))
 newimage.save(folderNDF+"kabupaten.png")
-
-driver.close()
