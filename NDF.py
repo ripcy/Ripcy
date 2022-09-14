@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 import urllib
 import ssl
 from PIL import Image
-from tanggal import besok
+from tanggal import thnskr, bulanangka, bulan, bsk
 import os
 
 # Setting
@@ -16,7 +16,11 @@ service = FirefoxService(executable_path=GeckoDriverManager().install())
 options = FirefoxOptions()
 driver = webdriver.Firefox(service=service, options=options)
 
-os.mkdir = ("D:/TAHUN "+thnskr+"/"+str (bulanangka)+". "+bulan+"/IBF")
+try:
+    os.makedirs("D:/TAHUN "+thnskr+"/"+str (bulanangka)+". "+bulan+"/NDF/"+bsk)
+except FileExistsError:
+    # directory already exists
+    pass
 
 folderNDF = ("D:/TAHUN "+thnskr+"/"+str (bulanangka)+". "+bulan+"/NDF/"+bsk+"/")
 
