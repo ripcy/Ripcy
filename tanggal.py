@@ -10,6 +10,7 @@ yesterday2 = date.today() - timedelta(days=2)
 tomorrow = date.today() + timedelta(days=1)
 datetoday = today.day
 bulan = calendar.month_name[today.month]
+bulan = bulan.upper()
 bulanangka = datetime.now().month
 
 # date
