@@ -415,3 +415,38 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://localhost:64425/devtools/browser/39f77966-6a7a-42b1-a36f-5b0f55f5b3f9
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://172.19.22.55."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://172.19.22.55."
+1664162068035	geckodriver	INFO	Listening on 127.0.0.1:60856
+1664162071465	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60857" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\arifr\\AppData\\Local\\Temp\\rust_mozprofile0Bc3NI"
+1664162072188	Marionette	INFO	Marionette enabled
+1664162072201	Marionette	INFO	Listening on port 60866
+Read port: 60866
+WebDriver BiDi listening on ws://127.0.0.1:60857
+1664162072414	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\arifr\\AppData\\Local\\Temp\\rust_mozprofile0Bc3NI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60857/devtools/browser/862520cc-d43c-48df-813a-b04a951f7480
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+1664162094258	Marionette	INFO	Stopped listening on port 60866
+1664162165570	geckodriver	INFO	Listening on 127.0.0.1:60939
+1664162168641	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60940" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\arifr\\AppData\\Local\\Temp\\rust_mozprofiletVtr3i"
+1664162169141	Marionette	INFO	Marionette enabled
+1664162169148	Marionette	INFO	Listening on port 60951
+Read port: 60951
+WebDriver BiDi listening on ws://127.0.0.1:60940
+1664162169289	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\arifr\\AppData\\Local\\Temp\\rust_mozprofiletVtr3i\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60940/devtools/browser/16deb7e1-a5bf-47ea-933e-2d22a38e9fc8
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+1664162215457	Marionette	INFO	Stopped listening on port 60951
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1664162245852	geckodriver	INFO	Listening on 127.0.0.1:61064
+1664162248922	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61065" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\arifr\\AppData\\Local\\Temp\\rust_mozprofileF0mB9A"
+1664162249441	Marionette	INFO	Marionette enabled
+1664162249449	Marionette	INFO	Listening on port 61075
+Read port: 61075
+WebDriver BiDi listening on ws://127.0.0.1:61065
+1664162249619	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\arifr\\AppData\\Local\\Temp\\rust_mozprofileF0mB9A\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61065/devtools/browser/c8870cba-768e-40bf-88a1-2d02f3e7d4ff
+1664162273445	Marionette	INFO	Stopped listening on port 61075
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
