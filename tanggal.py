@@ -13,6 +13,7 @@ datetoday = today.day
 bulan = calendar.month_name[today.month]
 bulan = bulan.upper()
 bulanangka = datetime.now().month
+hariini = today.strftime("%A")
 
 # date
 tglkmrn = yesterday.strftime("%d")
@@ -31,4 +32,4 @@ tanggalkemarin = yesterday.strftime("%d %B %Y")
 tanggalsekarang = today.strftime("%d %B %Y")
 tanggalbesok = tomorrow.strftime("%d %B %Y")
 tanggallusa = tomorrow2.strftime("%d %B %Y")
-#print(tanggalkemarin2)
+#print(hariini)
