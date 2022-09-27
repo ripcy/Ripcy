@@ -10,13 +10,16 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
+
+
+
 if __name__ == '__main__':
     options = webdriver.ChromeOptions()
     browser = uc.Chrome(
         options=options,
     )
-    browser.get('https://twitter.com')
-    cookies = pickle.load(open("cookies.pkl", "rb"))
+    browser.get('https://twitter.com/')
+    cookies = pickle.load(open("twitter.pkl", "rb"))
     for cookie in cookies:
         cookie['domain'] = ".twitter.com"
         
@@ -25,11 +28,4 @@ if __name__ == '__main__':
         except Exception as e:
             print(e)
     browser.get('https://twitter.com/home')
-
-    time.sleep(5)
-
-    cookies = browser.get_cookies()
-
-    pickle.dump(cookies, open("cookies.pkl", "wb"))
-
-    time.sleep(120)
+    time.sleep(60)
