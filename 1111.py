@@ -8,17 +8,10 @@ if __name__ == '__main__':
     browser = uc.Chrome(
         options=options,
     )
-    browser.get('https://web.whatsapp.com/')
-    time.sleep(90)
-    browser.get('https://web.telegram.org/')
-    time.sleep(90)
-    browser.get('https://www.facebook.com/')
-    time.sleep(90)
     browser.get('https://twitter.com/')
-    time.sleep(90)
-    browser.get('https://www.instagram.com/')
-    time.sleep(90)
+    time.sleep(240)
+
 
     cookies = browser.get_cookies()
 
-    pickle.dump(cookies, open("cookies.pkl", "wb"))
+    pickle.dump(cookies, open("twitter.pkl", "wb"))
