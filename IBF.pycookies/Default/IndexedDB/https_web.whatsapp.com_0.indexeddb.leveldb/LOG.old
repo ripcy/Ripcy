@@ -1,0 +1,12 @@
+2022/09/29-15:04:27.286 8398 Reusing MANIFEST c:\Ripcy\Script_1\Ripcy-1\IBF.pycookies\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/09/29-15:04:27.287 8398 Recovering log #52
+2022/09/29-15:04:27.303 8398 Reusing old log c:\Ripcy\Script_1\Ripcy-1\IBF.pycookies\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000052.log 
+2022/09/29-15:04:31.880 940 Level-0 table #59: started
+2022/09/29-15:04:31.909 940 Level-0 table #59: 1096421 bytes OK
+2022/09/29-15:04:31.910 940 Delete type=0 #52
+2022/09/29-15:04:32.158 59b4 Compacting 1@1 + 3@2 files
+2022/09/29-15:04:32.233 59b4 Generated table #60@1: 46089 keys, 2254200 bytes
+2022/09/29-15:04:32.272 59b4 Generated table #61@1: 19704 keys, 2175183 bytes
+2022/09/29-15:04:32.319 59b4 Generated table #62@1: 68081 keys, 1525353 bytes
+2022/09/29-15:04:32.319 59b4 Compacted 1@1 + 3@2 files => 5954736 bytes
+2022/09/29-15:04:32.320 59b4 compacted to: files[ 0 0 3 0 0 0 0 ]
