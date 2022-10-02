@@ -1,3 +1,5 @@
-2022/09/29-19:27:37.313 6664 Reusing MANIFEST c:\Ripcy\Script_1\Ripcy-1\IBF.pycookies\Default\Local Storage\leveldb/MANIFEST-000001
-2022/09/29-19:27:37.315 6664 Recovering log #4
-2022/09/29-19:27:37.316 6664 Reusing old log c:\Ripcy\Script_1\Ripcy-1\IBF.pycookies\Default\Local Storage\leveldb/000004.log 
+2022/10/03-08:34:05.877 5284 Reusing MANIFEST c:\Coding\Script\Ripcy\IBF.pycookies\Default\Local Storage\leveldb/MANIFEST-000001
+2022/10/03-08:34:05.890 5284 Recovering log #3
+2022/10/03-08:34:05.891 5284 Level-0 table #3: started
+2022/10/03-08:34:05.901 5284 Level-0 table #3: 29375 bytes OK
+2022/10/03-08:34:05.947 5284 Delete type=0 #3
