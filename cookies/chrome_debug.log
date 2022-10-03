@@ -1,8 +1,8 @@
-[26384:7412:0927/192936.194:INFO:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (1)
-[26384:7412:0927/192936.579:INFO:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (1)
-[26384:7412:0927/192936.583:INFO:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (1)
-[26384:7412:0927/192943.292:ERROR:device_event_log_impl.cc(214)] [19:29:43.297] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
-[26384:7412:0927/192943.299:ERROR:device_event_log_impl.cc(214)] [19:29:43.299] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
-[26384:7412:0927/192943.300:ERROR:device_event_log_impl.cc(214)] [19:29:43.300] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
-[26384:7412:0927/193000.157:WARNING:controller_impl.cc(1190)] Background download complete, client: 6, completion type: 1, file size:0
-[26384:7412:0927/193000.339:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[25724:15228:1003/115005.679:INFO:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (1)
+[25724:15228:1003/115006.085:INFO:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (1)
+[25724:15228:1003/115006.094:INFO:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (1)
+[25724:15228:1003/115013.625:ERROR:device_event_log_impl.cc(214)] [11:50:13.625] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[25724:15228:1003/115013.627:ERROR:device_event_log_impl.cc(214)] [11:50:13.628] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[25724:15228:1003/115013.628:ERROR:device_event_log_impl.cc(214)] [11:50:13.628] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[25724:15228:1003/115102.433:WARNING:CONSOLE(1)] "Fallback triggered https://web.whatsapp.com/WAWebWorker.84c47298b7b7770a5c50.worker.js.map [object Object]", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+[25724:15228:1003/115441.340:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
