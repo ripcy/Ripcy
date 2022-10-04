@@ -10,49 +10,21 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-from tanggal import thnskr, bulanangka, bulan, bsk, tanggalbesok, tanggallusa
+from tanggal import thnskr, bulanangka, bulan, bsk, tanggalbesok, tanggallusa, skr
 
 ### File yang di upload dan narasi
-folderNDF = ("D:/TAHUN "+thnskr+"/"+str (bulanangka)+". "+bulan+"/NDF/"+bsk+"/")
-asmat = os.path.realpath(folderNDF+"asmat.png")
-biak = os.path.realpath(folderNDF+"biak.png")
-bintang1 = os.path.realpath(folderNDF+"bintang1.png")
-bintang2 = os.path.realpath(folderNDF+"bintang2.png")
-boven = os.path.realpath(folderNDF+"boven.png")
-deiyai = os.path.realpath(folderNDF+"deiyai.png")
-dogiyai = os.path.realpath(folderNDF+"dogiyai.png")
-intan = os.path.realpath(folderNDF+"intan.png")
-jayawijaya = os.path.realpath(folderNDF+"jayawijaya.png")
-jprkab = os.path.realpath(folderNDF+"jprkab.png")
-jprkota = os.path.realpath(folderNDF+"jprkota.png")
-keerom = os.path.realpath(folderNDF+"keerom.png")
-lanny = os.path.realpath(folderNDF+"lanny.png")
-mamberaya = os.path.realpath(folderNDF+"mamberaya.png")
-mamteng = os.path.realpath(folderNDF+"mamteng.png")
-mappi = os.path.realpath(folderNDF+"mappi.png")
-merauke = os.path.realpath(folderNDF+"merauke.png")
-mimika = os.path.realpath(folderNDF+"mimika.png")
-nabire = os.path.realpath(folderNDF+"nabire.png")
-nduga = os.path.realpath(folderNDF+"ndunga.png")
-paniai = os.path.realpath(folderNDF+"paniai.png")
-puncak = os.path.realpath(folderNDF+"puncak.png")
-sarmi = os.path.realpath(folderNDF+"sarmi.png")
-supiori = os.path.realpath(folderNDF+"supiori.png")
-toli1 = os.path.realpath(folderNDF+"toli1.png")
-toli2 = os.path.realpath(folderNDF+"toli2.png")
-waropen = os.path.realpath(folderNDF+"waropen.png")
-yahu1 = os.path.realpath(folderNDF+"yahu1.png")
-yahu2 = os.path.realpath(folderNDF+"yahu2.png")
-yahu3 = os.path.realpath(folderNDF+"yahu3.png")
-yalimo = os.path.realpath(folderNDF+"yalimo.png")
-yapen = os.path.realpath(folderNDF+"yapen.png")
-
+folderNDF = ("D:/TAHUN "+thnskr+"/"+str (bulanangka)+". "+bulan+"/NDF/"+skr+"/")
 narasi1 = ("Hallo #SobatBMKG")
 narasi2 = ("Berikut admin bagikan Informasi Prakiraan Cuaca Tingkat Kecamatan Provinsi Papua berlaku mulai tanggal "+tanggalbesok+" pukul 09.00 WIT")
+narasi = ("Hallo #SobatBMKG Berikut admin bagikan Informasi Prakiraan Cuaca Tingkat Kecamatan Provinsi Papua berlaku mulai tanggal "+tanggalbesok+" pukul 09.00 WIT")
+image1 = folderNDF+"asmat.png\n"+folderNDF+"biak.png\n"+folderNDF+"bintang1.png\n"+folderNDF+"bintang2.png\n"+folderNDF+"boven.png\n"+folderNDF+"deiyai.png\n"+folderNDF+"dogiyai.png\n"+folderNDF+"intan.png\n"+folderNDF+"jayawijaya.png\n"+folderNDF+"jprkab.png\n"+folderNDF+"jprkota.png\n"+folderNDF+"keerom.png\n"+folderNDF+"lanny.png\n"+folderNDF+"mamberaya.png\n"+folderNDF+"mamteng.png\n"+folderNDF+"mappi.png"
+image2 = folderNDF+"merauke.png\n"+folderNDF+"mimika.png\n"+folderNDF+"nabire.png\n"+folderNDF+"ndunga.png\n"+folderNDF+"paniai.png\n"+folderNDF+"puncak.png\n"+folderNDF+"sarmi.png\n"+folderNDF+"supiori.png\n"+folderNDF+"toli1.png\n"+folderNDF+"toli2.png\n"+folderNDF+"waropen.png\n"+folderNDF+"yahu1.png\n"+folderNDF+"yahu2.png\n"+folderNDF+"yahu3.png\n"+folderNDF+"yalimo.png\n"+folderNDF+"yapen.png"
 
 ## Setting Chrome Driver
-currentPath = __file__.split("Whatsapp.py")[0] 
-driverPath = 'C:/Ripcy/Script_1/Ripcy/chromedriver.exe' 
+import pathlib
+cPath = pathlib.Path(__file__).parent.resolve()
+currentPath = str(cPath)
+driverPath = currentPath+'/chromedriver.exe' 
 chromeOptions = Options()
 chromeOptions.add_argument("user-data-dir=" + currentPath + "cookies")
 #chromeOptions.add_argument("--headless")
@@ -66,36 +38,24 @@ WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@
 WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[1]'))).send_keys(narasi2, Keys.ENTER)
 #time.sleep(60000)
 WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="clip"]/..'))).click()
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(asmat)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.CSS_SELECTOR, '#app > div > div > div._3ArsE > div.ldL67._3sh5K > span > div > span > div > div > div.g0rxnol2.thghmljt.p357zi0d.ggj6brxn.f8m0rgwh.gfz4du6o.r7fjleex.bs7a17vp > div > div._1HI4Y > div.p357zi0d.ktfrpxia.nu7pwgvd.ac2vgrno.sap93d0t.r15c9g6i._1vAZI > button'))).send_keys(biak)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(bintang1)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(bintang2)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(boven)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(deiyai)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(dogiyai)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(intan)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(jayawijaya)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(jprkota)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(jprkab)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(lanny)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(mamberaya)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(mamteng)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(mappi)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(merauke)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(mimika)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(nabire)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(nduga)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(paniai)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(puncak)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(sarmi)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(supiori)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(toli1)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(toli2)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(waropen)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(yahu1)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(yahu2)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(yahu3)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(yalimo)
-WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(yapen)
+WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(image1)
 WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/span/div/span/div/div/div[2]/div/div[2]/div[2]/div'))).click()
+time.sleep(5)
+WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="clip"]/..'))).click()
+WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(image2)
+WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/span/div/span/div/div/div[2]/div/div[2]/div[2]/div'))).click()
+time.sleep(60)
+
+
+##Telegram
+import telegram
+from telegram import InputMediaPhoto as imp
+apiToken = '5663329448:AAFYtirH9HbrgcsJWPisd-blu-AL1jV0Aes'
+chatID = '40071216'
+bot = telegram.Bot(token=apiToken)
+bot.send_media_group(chat_id=chatID,media=[imp(open(folderNDF+"asmat.png", 'rb')), imp(open(folderNDF+"biak.png", 'rb')), imp(open(folderNDF+"bintang1.png", 'rb')), imp(open(folderNDF+"bintang2.png", 'rb')), imp(open(folderNDF+"boven.png", 'rb')), imp(open(folderNDF+"deiyai.png", 'rb')), imp(open(folderNDF+"dogiyai.png", 'rb')), imp(open(folderNDF+"intan.png", 'rb'))])
+bot.send_media_group(chat_id=chatID,media=[imp(open(folderNDF+"jayawijaya.png", 'rb')), imp(open(folderNDF+"jprkab.png", 'rb')), imp(open(folderNDF+"jprkota.png", 'rb')), imp(open(folderNDF+"keerom.png", 'rb')), imp(open(folderNDF+"lanny.png", 'rb')), imp(open(folderNDF+"mamberaya.png", 'rb')), imp(open(folderNDF+"mamteng.png", 'rb')), imp(open(folderNDF+"mappi.png", 'rb'))])
+bot.send_media_group(chat_id=chatID,media=[imp(open(folderNDF+"merauke.png", 'rb')), imp(open(folderNDF+"mimika.png", 'rb')), imp(open(folderNDF+"nabire.png", 'rb')), imp(open(folderNDF+"ndunga.png", 'rb')), imp(open(folderNDF+"paniai.png", 'rb')), imp(open(folderNDF+"puncak.png", 'rb')), imp(open(folderNDF+"sarmi.png", 'rb')), imp(open(folderNDF+"supiori.png", 'rb'))])
+bot.send_media_group(chat_id=chatID,media=[imp(open(folderNDF+"toli1.png", 'rb'), caption=narasi), imp(open(folderNDF+"toli2.png", 'rb')), imp(open(folderNDF+"waropen.png", 'rb')), imp(open(folderNDF+"yahu1.png", 'rb')), imp(open(folderNDF+"yahu2.png", 'rb')), imp(open(folderNDF+"yahu3.png", 'rb')), imp(open(folderNDF+"yalimo.png", 'rb')), imp(open(folderNDF+"yapen.png", 'rb'))])
+
 driver.quit()
