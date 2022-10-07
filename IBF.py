@@ -3,6 +3,7 @@ import os, os.path, time, urllib.request
 from PIL import Image
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -29,10 +30,11 @@ import pathlib
 cPath = pathlib.Path(__file__).parent.resolve()
 currentPath = str(cPath)
 driverPath = currentPath+'/chromedriver.exe' 
+chromeService = Service(driverPath)
 chromeOptions = Options()
 chromeOptions.add_argument("user-data-dir=" + currentPath + "cookies")
 #chromeOptions.add_argument("--headless")
-driver = webdriver.Chrome(driverPath, options=chromeOptions)
+driver = webdriver.Chrome(service=chromeService, options=chromeOptions)
 
 ## Whatsapp
 driver.get("http://web.whatsapp.com")
