@@ -12,9 +12,9 @@ from selenium.webdriver.common.action_chains import ActionChains
 from tanggal import *
 
 ### File yang di upload dan narasi
-folder = ("D:/TAHUN "+thnskr+"/"+str (bulanangka)+". "+bulan+"/MEDSOS/")
-video = folder+skr+".mp4"
-narasi = ("Hallo #SobatBMKG Berikut admin bagikan update informasi prakiraan cuaca hari ini untuk Kota Jayapura, Kab. Keerom dan sekitarnya "+hariini+", "+tanggalsekarang)
+folder = ("D:/TAHUN "+thnskr+"/"+str (bulanangka)+". "+bulan+"/PD 3 HARIAN/")
+image = folder+tglskr+" - "+tgllusa+".png"
+narasi = ("Selamat "+pssm+" #SobatBMKG Berikut Informasi Peringatan Dini 3 (Tiga) harian di Wilayah Papua berlaku "+tglskr+" - "+tanggallusa)
 
 ### Setting Driver
 import pathlib
@@ -31,7 +31,7 @@ driver = webdriver.Chrome(service=chromeService, options=chromeOptions)
 driver.get("http://web.whatsapp.com")
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="side"]/div[1]/div/div/div[2]/div/div[2]'))).send_keys("Arif Ripcy", Keys.ENTER)
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="clip"]/..'))).click()
-WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(video)
+WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(image)
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/span/div/span/div/div/div[2]/div/div[1]/div[3]/div/div[2]/div[1]/div[2]'))).send_keys(narasi)
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/span/div/span/div/div/div[2]/div/div[2]/div[2]/div'))).click()
 
@@ -44,7 +44,7 @@ WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.CSS_SELECTOR
 WebDriverWait(driver, 200).until(EC.element_to_be_clickable((By.CLASS_NAME, 'DraftEditor-root'))).click()
 text1 = WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.CLASS_NAME, 'public-DraftEditorPlaceholder-root')))
 ActionChains(driver).move_to_element(text1).send_keys(narasi).perform()
-WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//input[@accept]'))).send_keys(video)
+WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//input[@accept]'))).send_keys(image)
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div/div[3]/div/div[1]/div/div/div/div/div[2]/div[3]/div/div/div[2]/div[4]'))).click()
 
 driver.execute_script("window.open('');")
@@ -56,12 +56,23 @@ WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.CSS_SELECTOR
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.x1a2a7pz > .x16tdsg8'))).send_keys(narasi)
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.x12mruv9:nth-child(2) .x1b0d499:nth-child(1)'))).click()
 photo_element = WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, "//input[@type='file']")))
-photo_element.send_keys(video)
+photo_element.send_keys(image)
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.xtk6v10 > .x1lliihq'))).click()
+
+## Instagram
+driver.get('https://www.instagram.com/')
+WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.\_acub .\_ab6-'))).click()
+WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, "//input[@accept='image/jpeg,image/png,image/heic,image/heif,video/mp4,video/quicktime']"))).send_keys(image)
+WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.\_ab8w:nth-child(1) > .\_ab8w .\_abfz .\_ab6-'))).click()
+WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.\_acan:nth-child(1) > .\_ab8w > .\_ab8w > .\_aacl'))).click()
+WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.\_ab99 > .\_acan'))).click()
+WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.\_ab99 > .\_acan'))).click()
+WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.\_aaeg'))).send_keys(narasi)
+WebDriverWait(driver, 50).until(EC.element_to_be_clickable((By.XPATH, "//button[text()='Share']"))).click()
 time.sleep(60)
 
 ## Telegram
 apiToken = '5663329448:AAFYtirH9HbrgcsJWPisd-blu-AL1jV0Aes'
 chatID = '40071216'
 bot = Bot(token=apiToken)
-bot.send_video(chat_id=chatID,media=[imp(open(video, 'rb'), caption=narasi)])
+bot.send_video(chat_id=chatID,media=[imp(open(image, 'rb'), caption=narasi)])

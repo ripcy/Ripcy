@@ -1,9 +1,5 @@
 ###  Import Module
-import os
 import time
-import urllib.request
-from PIL import Image
-from io import BytesIO
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -45,7 +41,6 @@ WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@
 WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(image2)
 WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/span/div/span/div/div/div[2]/div/div[2]/div[2]/div'))).click()
 time.sleep(60)
-
 
 ##Telegram
 import telegram

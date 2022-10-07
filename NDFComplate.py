@@ -1,5 +1,5 @@
 import NDF
-import NDFtoWA
+import NDFtoTeleWA
 
 NDF
-NDFtoWA
+NDFtoTeleWA

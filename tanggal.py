@@ -19,6 +19,7 @@ hariini = today.strftime("%A")
 tglkmrn = yesterday.strftime("%d")
 tglskr = today.strftime("%d")
 tglbsk = tomorrow.strftime("%d")
+tgllusa = tomorrow2.strftime("%d")
 blnskr = today.strftime("%m")
 thnskr = today.strftime("%Y")
 
@@ -33,3 +34,16 @@ tanggalsekarang = today.strftime("%d %B %Y")
 tanggalbesok = tomorrow.strftime("%d %B %Y")
 tanggallusa = tomorrow2.strftime("%d %B %Y")
 #print(hariini)
+
+def get_part_of_day(h):
+    return (
+        "pagi"
+        if 5 <= h <= 11
+        else "siang"
+        if 11 < h < 15
+        else "sore"
+        if 15 <= h <= 18
+        else "malam"
+    )
+
+pssm = get_part_of_day(datetime.now().hour)
