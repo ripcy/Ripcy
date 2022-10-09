@@ -24,7 +24,7 @@ driverPath = currentPath+'/chromedriver.exe'
 chromeService = Service(driverPath)
 chromeOptions = Options()
 chromeOptions.add_argument("user-data-dir=" + currentPath + "cookies")
-chromeOptions.headless = True
+#chromeOptions.headless = True
 driver = webdriver.Chrome(service=chromeService, options=chromeOptions)
 
 ## Whatsapp
@@ -44,7 +44,7 @@ WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.CSS_SELECTOR
 WebDriverWait(driver, 200).until(EC.element_to_be_clickable((By.CLASS_NAME, 'DraftEditor-root'))).click()
 text1 = WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.CLASS_NAME, 'public-DraftEditorPlaceholder-root')))
 ActionChains(driver).move_to_element(text1).send_keys(narasi).perform()
-WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//input[@accept]'))).send_keys(image)
+WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//input[@accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/quicktime"]'))).send_keys(image)
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div/div[3]/div/div[1]/div/div/div/div/div[2]/div[3]/div/div/div[2]/div[4]'))).click()
 
 driver.execute_script("window.open('');")
