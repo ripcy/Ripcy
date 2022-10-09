@@ -23,8 +23,7 @@ currentPath = str(cPath)
 driverPath = currentPath+'/chromedriver.exe' 
 chromeOptions = Options()
 chromeOptions.add_argument("user-data-dir=" + currentPath + "cookies")
-#chromeOptions.headless = True
-#chromeOptions.add_argument("--headless")
+chromeOptions.headless = True
 driver = webdriver.Chrome(driverPath, options=chromeOptions)
 
 #Whatsapp
