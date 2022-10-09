@@ -1,6 +1,5 @@
 ###  Import Module
 import os, os.path, time, urllib.request
-from PIL import Image
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -33,6 +32,7 @@ driverPath = currentPath+'/chromedriver.exe'
 chromeService = Service(driverPath)
 chromeOptions = Options()
 chromeOptions.add_argument("user-data-dir=" + currentPath + "cookies")
+chromeOptions.headless = True
 #chromeOptions.add_argument("--headless")
 driver = webdriver.Chrome(service=chromeService, options=chromeOptions)
 
@@ -49,7 +49,7 @@ time.sleep(10)
 import telegram
 from telegram import InputMediaPhoto as imp
 apiToken = '5663329448:AAFYtirH9HbrgcsJWPisd-blu-AL1jV0Aes'
-chatID = '40071216'
+chatID = '-38488324'
 bot = telegram.Bot(token=apiToken)
 bot.send_media_group(chat_id=chatID,media=[imp(open(image, 'rb'), caption=narasi)])
 

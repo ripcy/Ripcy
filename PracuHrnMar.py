@@ -1,6 +1,5 @@
 ###  Import Module
 import os, os.path, time
-from PIL import Image
 from selenium import webdriver
 from telegram import Bot, InputMediaPhoto as imp
 from selenium.webdriver.chrome.options import Options
@@ -15,7 +14,7 @@ from tanggal import thnskr, bulanangka, bulan, skr, tanggalbesok, tanggallusa, b
 ### File yang di upload dan narasi
 folderNDF = ("D:/TAHUN "+thnskr+"/"+str (bulanangka)+". "+bulan+"/NDF/"+skr+"/")
 folderMar = ("D:/TAHUN "+thnskr+"/"+str (bulanangka)+". "+bulan+"/MARITIM/")
-allimage = folderNDF+"kabupaten.png \n" +folderMar+bsk+".png"
+allimage = folderNDF+"kabupaten.png \n"# +folderMar+bsk+".png"
 narasi = ("Informasi prakiraan cuaca Kabupaten Provinsi Papua serta prakiraan cuaca pelayaran dan tinggi gelombang Perairan Papua - Papua Barat, "+tanggalbesok+" berlaku 24 jam mulai pukul 09.00 WIT")
 
 ### Setting Driver
@@ -31,7 +30,7 @@ driver = webdriver.Chrome(service=chromeService, options=chromeOptions)
 
 ## Whatsapp
 driver.get("http://web.whatsapp.com")
-WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="side"]/div[1]/div/div/div[2]/div/div[2]'))).send_keys("Arif", Keys.ENTER)
+WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="side"]/div[1]/div/div/div[2]/div/div[2]'))).send_keys("Info BMKG Papua", Keys.ENTER)
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[1]'))).send_keys(narasi, Keys.ENTER)
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="clip"]/..'))).click()
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/footer//*[@data-icon="attach-image"]/../input'))).send_keys(allimage)
@@ -62,6 +61,8 @@ time.sleep(60)
 
 ## Telegram
 apiToken = '5663329448:AAFYtirH9HbrgcsJWPisd-blu-AL1jV0Aes'
-chatID = '40071216'
+chatID = '-38488324'
 bot = Bot(token=apiToken)
-bot.send_media_group(chat_id=chatID,media=[imp(open(folderNDF+"kabupaten.png", 'rb'), caption=narasi), imp(open(folderMar+bsk+".png", 'rb'))])
+bot.send_media_group(chat_id=chatID,media=[imp(open(folderNDF+"kabupaten.png", 'rb'), caption=narasi)
+                    #, imp(open(folderMar+bsk+".png", 'rb'))
+                    ])

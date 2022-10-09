@@ -1,5 +1,4 @@
 from selenium import webdriver
-from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.common.by import By
@@ -10,7 +9,11 @@ from tanggal import thnskr, bulanangka, bulan, bsk
 import os
 
 # Setting
-service = FirefoxService(executable_path=GeckoDriverManager().install())
+import pathlib
+cPath = pathlib.Path(__file__).parent.resolve()
+currentPath = str(cPath)
+driverPath = currentPath+'/geckodriver.exe' 
+service = FirefoxService(executable_path=driverPath)
 options = FirefoxOptions()
 driver = webdriver.Firefox(service=service, options=options)
 
