@@ -9,6 +9,7 @@ yesterday = date.today() - timedelta(days=1)
 yesterday2 = date.today() - timedelta(days=2)
 tomorrow = date.today() + timedelta(days=1)
 tomorrow2 = date.today() + timedelta(days=2)
+tomorrow3 = date.today() + timedelta(days=2)
 datetoday = today.day
 bulan = calendar.month_name[today.month]
 bulan = bulan.upper()
@@ -26,6 +27,7 @@ thnskr = today.strftime("%Y")
 # dd/mm/YY
 kmrn = yesterday.strftime("%d%m%Y")
 bsk = tomorrow.strftime("%d%m%Y")
+bsk2 = tomorrow2.strftime("%d%m%Y")
 skr = today.strftime("%d%m%Y")
 
 # .strftime("%d %B, %Y")
@@ -33,6 +35,7 @@ tanggalkemarin = yesterday.strftime("%d %B %Y")
 tanggalsekarang = today.strftime("%d %B %Y")
 tanggalbesok = tomorrow.strftime("%d %B %Y")
 tanggallusa = tomorrow2.strftime("%d %B %Y")
+tanggallusa2 = tomorrow3.strftime("%d %B %Y")
 #print(hariini)
 
 def get_part_of_day(h):
