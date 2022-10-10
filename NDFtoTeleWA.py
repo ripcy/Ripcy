@@ -23,7 +23,7 @@ currentPath = str(cPath)
 driverPath = currentPath+'/chromedriver.exe' 
 chromeOptions = Options()
 chromeOptions.add_argument("user-data-dir=" + currentPath + "cookies")
-chromeOptions.headless = True
+#chromeOptions.headless = True
 driver = webdriver.Chrome(driverPath, options=chromeOptions)
 
 #Whatsapp
@@ -56,5 +56,4 @@ bot.send_media_group(chat_id=chatID,media=[imp(open(folderNDF+"merauke.png", 'rb
 time.sleep(60)
 bot.send_media_group(chat_id=chatID,media=[imp(open(folderNDF+"toli1.png", 'rb'), caption=narasi), imp(open(folderNDF+"toli2.png", 'rb')), imp(open(folderNDF+"waropen.png", 'rb')), imp(open(folderNDF+"yahu1.png", 'rb')), imp(open(folderNDF+"yahu2.png", 'rb')), imp(open(folderNDF+"yahu3.png", 'rb')), imp(open(folderNDF+"yalimo.png", 'rb')), imp(open(folderNDF+"yapen.png", 'rb'))])
 
-time.sleep(60)
-#driver.quit()
+driver.quit()

@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.common.by import By
-import urllib
+import urllib.request
 import ssl
 from PIL import Image
 from tanggal import thnskr, bulanangka, bulan, bsk
