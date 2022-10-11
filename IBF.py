@@ -41,7 +41,7 @@ chromeOptions.add_argument("user-data-dir=" + currentPath + "cookies")
 chromeOptions.headless = True
 #chromeOptions.add_argument("--headless")
 driver = webdriver.Chrome(service=chromeService, options=chromeOptions)
-'''
+
 ## Whatsapp
 driver.get("http://web.whatsapp.com")
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="side"]/div[1]/div/div/div[2]/div/div[2]'))).send_keys("Info BMKG Papua", Keys.ENTER)
@@ -50,7 +50,7 @@ WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/span/div/span/div/div/div[2]/div/div[1]/div[3]/div/div/div[2]/div[1]/div[2]'))).send_keys(narasi)
 WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/span/div/span/div/div/div[2]/div/div[2]/div[2]/div'))).click()
 time.sleep(10)
-'''
+
 ##Telegram
 import telegram
 from telegram import InputMediaPhoto as imp

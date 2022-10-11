@@ -14,7 +14,7 @@ from tanggal import thnskr, bulanangka, bulan, skr, tanggalbesok, tanggallusa, b
 ### File yang di upload dan narasi
 folderNDF = ("D:/TAHUN "+thnskr+"/"+str (bulanangka)+". "+bulan+"/NDF/"+skr+"/")
 folderMar = ("D:/TAHUN "+thnskr+"/"+str (bulanangka)+". "+bulan+"/MARITIM/")
-allimage = folderNDF+"kabupaten.png \n"# +folderMar+bsk+".png"
+allimage = folderNDF+"kabupaten.png \n" +folderMar+bsk+".png"
 narasi = ("Informasi prakiraan cuaca Kabupaten Provinsi Papua serta prakiraan cuaca pelayaran dan tinggi gelombang Perairan Papua - Papua Barat, "+tanggalbesok+" berlaku 24 jam mulai pukul 09.00 WIT")
 
 ### Setting Driver
@@ -64,5 +64,5 @@ apiToken = '5663329448:AAFYtirH9HbrgcsJWPisd-blu-AL1jV0Aes'
 chatID = '-38488324'
 bot = Bot(token=apiToken)
 bot.send_media_group(chat_id=chatID,media=[imp(open(folderNDF+"kabupaten.png", 'rb'), caption=narasi)
-                    #, imp(open(folderMar+bsk+".png", 'rb'))
+                    , imp(open(folderMar+bsk+".png", 'rb'))
                     ])

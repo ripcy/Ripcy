@@ -356,7 +356,7 @@ im1 = Image.open(folderNDF+"1.png").crop((0, 0, 744, 1028))
 im2 = Image.open(folderNDF+"2.png").crop((0, 88, 744, 820))
 
 
-newimage = Image.new("RGB", (744, 1775), "white")
+newimage = Image.new("RGBA", (744, 1775), "white")
 newimage.paste(im1, (0,0))
 newimage.paste(im2, (0,1028))
 newimage.save(folderNDF+"kabupaten.png")
