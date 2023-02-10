@@ -24,7 +24,7 @@ driverPath = currentPath+'/geckodriver.exe'
 service = FirefoxService(executable_path=driverPath)
 options = FirefoxOptions()
 options.add_argument("-profile")
-options.add_argument(r'C:\Users\peljas bbmkg6\AppData\Roaming\Mozilla\Firefox\Profiles\q7yszu7p.default')
+options.add_argument(r'Z:\Data_Lain\RIpcyFirefox')
 driver = webdriver.Firefox(service=service, options=options)
 
 try:
